@@ -1,0 +1,146 @@
+/* Journey to the Center of the Earth Practicum */
+/* Will Landrieu */
+
+h1{
+    background-image: url(../img/cave.jpg);
+    background-position: center center;
+    background-size: cover;
+    color: #fff;
+    text-shadow: 3px 3px black;
+    min-height: 100px;
+    min-width: 200px;
+/*    margin-left: 100px;
+    margin-right: 100px; */
+    margin-top: 3px;
+    margin-bottom: 3px;
+    text-align: center;
+    font-size: 60px;
+/*    padding-top: 30px; */
+    border: 2px solid #864;
+}
+
+h2{
+    border-bottom: 2px dashed black;
+    border-width: 2px;
+}
+
+ body{
+    background: linear-gradient(#765729, black);
+    margin: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    align-items: center;
+    row-gap: 0px;
+}
+
+nav, main, aside, footer { 
+    background-color: lightgray;
+}
+
+header {
+    width: 100%;
+}
+
+nav,main,aside,footer {
+    box-shadow: 8px 8px 20px 6px #222 inset;
+    margin: 3px;
+    border: 2px solid #864;
+    width: 100%
+}
+
+nav{
+    text-align: center;
+    height: 50px;
+/*    margin-left: 100px;
+    margin-right: 100px; */
+    border: 2px solid #864;
+}
+
+ul{
+    overflow: hidden;
+}
+
+li{
+    display: inline-block;
+    padding-left: 15px;
+}
+
+a{
+    color:#000;
+}
+
+a:hover{
+    color: #a52a2a
+}
+
+main{
+    font-size: 16px;
+/*    width: 50%;
+    float:left; 
+    margin-left: 100px; */
+    padding: 10px 20px;
+    border: 2px solid #864;
+}
+p::first-line{
+    font-size: 18px; 
+}
+
+aside{
+/*     width: 30%;
+    float:right; 
+    margin-right: 100px; */
+    padding: 10px 20px;
+    border: 2px solid #864;
+}
+
+#cover {
+    max-width: 40%;
+    float: left;
+    margin-right: 10px;
+}
+
+#cryptogram {
+    max-width: 80%;
+
+}
+
+.submission{
+    border: 2px solid black;
+    margin: 5px;
+    padding: 5px;
+}
+
+.opinion {
+    text-align: center;
+    font-weight: bold;
+}
+
+.signature{
+    text-align: center;
+    font-style: italic;
+}
+
+footer{
+    text-align: center;
+    clear:both;
+ /*   margin-left: 100px;
+    margin-right: 100px; */
+    padding: 10px 20px;
+    border: 2px solid #864;
+}
+
+@media screen and (min-width: 800px) {
+    main { 
+        max-width: 50%;
+        float: left;
+    }
+    aside {
+        max-width: 30%;
+        float: right;
+    }
+    footer {
+        clear: both;
+    }
+}
