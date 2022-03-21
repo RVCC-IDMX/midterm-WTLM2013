@@ -9,13 +9,10 @@ h1{
     text-shadow: 3px 3px black;
     min-height: 100px;
     min-width: 200px;
-/*    margin-left: 100px;
-    margin-right: 100px; */
     margin-top: 3px;
     margin-bottom: 3px;
     text-align: center;
     font-size: 60px;
-/*    padding-top: 30px; */
     border: 2px solid #864;
 }
 
@@ -24,26 +21,32 @@ h2{
     border-width: 2px;
 }
 
- body{
-    background: linear-gradient(#765729, black);
-    margin: auto;
-
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1000px;
-    align-items: center;
-    row-gap: 0px;
+/* inline text styles */
+span {
+    font-style: italic;
 }
 
-nav, main, aside, footer { 
-    background-color: lightgray;
+.character {
+    font-style: normal;
+    font-weight: bold;
+}
+
+body{
+    background: linear-gradient(#765729, black);
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1280px;
+    row-gap: 0px;
 }
 
 header {
     width: 100%;
 }
 
-nav,main,aside,footer {
+/* box styling */
+nav, main, aside, footer {
+    background-color: lightgray;
     box-shadow: 8px 8px 20px 6px #222 inset;
     margin: 3px;
     border: 2px solid #864;
@@ -53,8 +56,6 @@ nav,main,aside,footer {
 nav{
     text-align: center;
     height: 50px;
-/*    margin-left: 100px;
-    margin-right: 100px; */
     border: 2px solid #864;
 }
 
@@ -62,48 +63,62 @@ ul{
     overflow: hidden;
 }
 
-li{
+/* Separator between nav links */
+nav li{
     display: inline-block;
+    border-left: solid 3px #765729;
     padding-left: 15px;
+    padding-right: 15px;
+}
+li:first-child {
+    border-left: none;
 }
 
-a{
-    color:#000;
-}
-
-a:hover{
-    color: #a52a2a
-}
+/* link colors */
+a{    color:#000; }
+a:hover{    color: #a52a2a }
 
 main{
     font-size: 16px;
-/*    width: 50%;
-    float:left; 
-    margin-left: 100px; */
     padding: 10px 20px;
     border: 2px solid #864;
 }
+
 p::first-line{
     font-size: 18px; 
 }
 
 aside{
-/*     width: 30%;
-    float:right; 
-    margin-right: 100px; */
     padding: 10px 20px;
     border: 2px solid #864;
 }
 
+/* Images */
 #cover {
-    max-width: 40%;
+    max-width: 25%;
+    min-width: 200px;
     float: left;
-    margin-right: 10px;
+    margin: 0px 15px 15px 0px;
 }
 
 #cryptogram {
-    max-width: 80%;
+    display: table;
+    max-width: 100%;
+    padding: 0% 10%;
+}
 
+#cryptimg {
+    max-width: 100%;
+    padding: 0px;
+}
+
+figcaption {
+    display: table-caption;
+    padding: 0px;
+    width: 100%;
+    text-align: center;
+    font-style: italic;
+    caption-side: bottom;
 }
 
 .submission{
@@ -125,22 +140,15 @@ aside{
 footer{
     text-align: center;
     clear:both;
- /*   margin-left: 100px;
-    margin-right: 100px; */
     padding: 10px 20px;
     border: 2px solid #864;
 }
 
 @media screen and (min-width: 800px) {
     main { 
-        max-width: 50%;
-        float: left;
+        flex: 2;
     }
     aside {
-        max-width: 30%;
-        float: right;
-    }
-    footer {
-        clear: both;
+        flex: 1;
     }
 }
